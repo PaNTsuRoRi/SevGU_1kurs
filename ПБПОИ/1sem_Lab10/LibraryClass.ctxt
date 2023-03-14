@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=LibraryClass
+comment1.params=X
+comment1.target=void\ WriteArr(int[])
+comment2.params=X\ start\ end
+comment2.target=int\ SumPositiveElem(int[],\ int,\ int)
+comment3.params=X\ start\ end
+comment3.target=int\ NumNegativeElem(int[],\ int,\ int)
+numComments=4

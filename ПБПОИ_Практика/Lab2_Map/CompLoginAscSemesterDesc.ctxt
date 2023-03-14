@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=CompLoginAscSemesterDesc
+comment1.params=dis1\ dis2
+comment1.target=int\ compare(DisciplineKey,\ DisciplineKey)
+numComments=2

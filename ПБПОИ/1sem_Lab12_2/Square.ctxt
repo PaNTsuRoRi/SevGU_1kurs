@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Square
+comment1.params=
+comment1.target=Square()
+comment2.params=adult\ children\ animals\ money\ square
+comment2.target=Square(int,\ int,\ boolean,\ float,\ int)
+comment3.params=ob
+comment3.target=Square(Square)
+comment4.params=
+comment4.target=int\ getSquare()
+comment5.params=square
+comment5.target=void\ setSquare(int)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment7.params=ob
+comment7.target=boolean\ equals(java.lang.Object)
+comment8.params=
+comment8.target=int\ hashCode()
+comment9.params=family
+comment9.target=int\ compareTo(Family)
+numComments=10

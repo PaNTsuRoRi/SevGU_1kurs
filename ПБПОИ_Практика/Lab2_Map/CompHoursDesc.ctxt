@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=CompHoursDesc
+comment1.params=syllabus
+comment1.target=CompHoursDesc(java.util.Map)
+comment2.params=dis1\ dis2
+comment2.target=int\ compare(DisciplineKey,\ DisciplineKey)
+numComments=3

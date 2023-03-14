@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Lab9a
+comment1.params=X
+comment1.target=int\ Scalar(int[][])
+comment2.params=X
+comment2.target=int[]\ Vector(int[][])
+comment3.params=X
+comment3.target=int[][]\ Transpose(int[][])
+comment4.params=X
+comment4.target=void\ WriteArr(int[][])
+comment5.params=X
+comment5.target=void\ WriteVec(int[])
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+numComments=7

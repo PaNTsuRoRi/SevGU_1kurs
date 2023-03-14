@@ -1,0 +1,149 @@
+public class Department
+{
+    private final static int MAX_NUM=5;
+    private final static String DEPARTMENT_FORMAT_STRING="Кафедра: %s, число преподавателей: %2d";
+    private String name;
+    private Lecturer[] lecArr;
+    private int num;
+    public Department()
+        {name=""; num=0; lecArr=new Lecturer [MAX_NUM];}
+    public Department(String name, int numMax)
+        {this.name=name; 
+         num=0;
+         lecArr=new Lecturer [numMax];}
+    public void setName(String name) {this.name=name;}
+    public String getName() {return name;}
+    public int getNum() {return num;}
+    public Lecturer getLec(int id)
+    {
+        for (int i=0; i<num; i++)
+            if(lecArr[i].getId()==id) return lecArr[i];
+        return null;    
+    }
+    public String toString()
+        {return String.format(DEPARTMENT_FORMAT_STRING, name, num);}
+    public boolean addLec(Lecturer lec)
+    {
+        if (num==lecArr.length) return false;
+        for (int i=0; i<num; i++)
+            if (lecArr[i].getId()==lec.getId()) return false;
+        lecArr[num]=lec;
+        num++;
+        return true;
+    }
+    public boolean delLec(int id)
+    {
+        int i;
+        for (i=0; i<num; i++)
+            if (lecArr[i].getId()==id) break;
+        if (i==num)
+            return false;
+        for (i+=1; i<num; i++)
+            lecArr[i-1]=lecArr[i];
+        lecArr[i-1]=null;
+        num--;
+        return true;
+    }
+    public double avgSalary()
+    {
+        if (num==0) return 0;
+        double avg=0;
+        for (int i=0; i<num; i++)
+            avg=avg+lecArr[i].getSalary();
+        return avg/num;
+    }
+    public Lecturer[] aboveAvgSalary()
+    {
+        if (num==0) return null;
+        Lecturer []X=new Lecturer[num];
+        int j=0;
+        double avg=avgSalary();
+        for (int i=0; i<num; i++)
+            if (lecArr[i].getSalary()>avg)
+            {
+                X[j]=lecArr[i];
+                j+=1;
+            }
+        if (j==0) return null;
+        Lecturer []Y=new Lecturer[j];
+        for (int i=0; i<j; i++) Y[i]=X[i];
+        return Y;
+    }
+    public Lecturer[] betweenSalary(double s1, double s2)
+    {
+        if (num==0) return null;
+        Lecturer[]X=new Lecturer [num];
+        int j=0;
+        for (int i=0; i<num; i++)
+        {
+            double s=lecArr[i].getSalary();
+            if ((s>=s1)&&(s<=s2))
+            {
+                X[j]=lecArr[i];
+                j+=1;
+            }
+        }
+        if (j==0) return null;
+        Lecturer []Y=new Lecturer[j];
+        for (int i=0; i<j; i++) Y[i]=X[i];
+        return Y;
+    }
+    public void putDepartment()
+    {
+        System.out.println(name);
+        if (num!=0)
+        {
+            System.out.printf("%5s%17s%11s%17s\n", 
+                              "Номер", "id преподавателя", "ФИО", "Размер ставки");
+            for (int i=0; i<num; i++)
+            {
+                System.out.printf(" %-7d %-15d %-16s %-10.2f\n", 
+                                  i+1, lecArr[i].getId(), lecArr[i].getName(), lecArr[i].getSalary());
+            }
+        }
+    }
+    public Lecturer[] sortSalary(int sortType)
+    {
+        boolean flag;
+        if(sortType<0)
+        {
+            for(int i=lecArr.length-1; i>0; i--)
+            {
+                flag=true;
+                for(int j=0; j<i; j++)
+                {
+                    if(lecArr[j].compareTo(lecArr[j+1])>0)
+                    {
+                        Lecturer l=lecArr[j+1];
+                        lecArr[j]=lecArr[j+1];
+                        lecArr[j+1]=l;
+                        flag=false;
+                    }
+                }
+                if(flag) break;
+            }
+        }
+        else 
+        {
+            if (sortType>0)
+            {
+                    for(int i=lecArr.length-1; i>0; i--)
+                {
+                    flag=true;
+                    for(int j=0; j<i; j++)
+                    {
+                        if(lecArr[j].compareTo(lecArr[j+1])<0)
+                        {
+                            Lecturer l=lecArr[j+1];
+                            lecArr[j]=lecArr[j+1];
+                            lecArr[j+1]=l;
+                            flag=false;
+                        }
+                    }
+                    if(flag) break;
+                }
+            }
+        }
+        return lecArr;
+    }
+}

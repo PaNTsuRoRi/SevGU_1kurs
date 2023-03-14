@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=DisciplineKey
+comment1.params=
+comment1.target=DisciplineKey()
+comment10.params=ob
+comment10.target=boolean\ equals(java.lang.Object)
+comment11.params=
+comment11.target=int\ hashCode()
+comment12.params=dk
+comment12.target=int\ compareTo(DisciplineKey)
+comment2.params=idDiscipline\ login\ semester
+comment2.target=DisciplineKey(int,\ java.lang.String,\ int)
+comment3.params=
+comment3.target=int\ getIdDiscipline()
+comment4.params=
+comment4.target=java.lang.String\ getLogin()
+comment5.params=
+comment5.target=int\ getSemester()
+comment6.params=idDiscipline
+comment6.target=void\ setIdDiscipline(int)
+comment7.params=login
+comment7.target=void\ setLogin(java.lang.String)
+comment8.params=semester
+comment8.target=void\ setSemester(int)
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=13

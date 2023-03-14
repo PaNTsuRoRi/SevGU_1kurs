@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Family
+comment1.params=
+comment1.target=Family()
+comment10.params=cost1
+comment10.target=void\ setCost(double)
+comment11.params=
+comment11.target=java.lang.String\ toString()
+comment12.params=obj
+comment12.target=boolean\ equals(Family)
+comment2.params=adults1\ children1\ animal1\ cost1
+comment2.target=Family(int,\ int,\ boolean,\ double)
+comment3.params=
+comment3.target=int\ getAdults()
+comment4.params=
+comment4.target=int\ getChildren()
+comment5.params=
+comment5.target=boolean\ getAnimal()
+comment6.params=
+comment6.target=double\ getCost()
+comment7.params=adults1
+comment7.target=void\ setAdults(int)
+comment8.params=children1
+comment8.target=void\ setChildren(int)
+comment9.params=animal1
+comment9.target=void\ setAnimal(boolean)
+numComments=13
